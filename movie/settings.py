@@ -57,7 +57,7 @@ ROOT_URLCONF = 'movie.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR +'/movie_server/Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,8 +130,9 @@ USE_TZ = False
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'public')
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-)
+os.path.join(BASE_DIR, "static"),)
+
+
 
 LOGIN_URL = '/admin/login/'
 LOGIN_REDIRECT_URL = '/admin/login/'

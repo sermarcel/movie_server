@@ -1,0 +1,43 @@
+
+
+
+    Browse movies
+
+    <div class="panel panel-success">
+        <div class="panel-heading">
+        
+        </div>
+        <div class="panel-body">
+            <div>
+                <table class="table" id="movies-table">
+                    <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Director</th>
+                        <th>Year</th>
+                    </tr>
+                    </thead>
+                    <tbody class="list">
+                    {% for a in movies %}
+                        <tr>
+                            <td>{{ a.title }}</td>
+                            <td>{{ a.director }}</td>                            
+                            <td>{{ a.year }}</td>
+                           
+                        </tr>
+                        {#                    {% empty %}#}
+                        {#                        <tr>#}
+                        {#                           #}
+                        {#                        </tr>#}
+                    {% endfor %}
+                       </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
