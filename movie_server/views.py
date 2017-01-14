@@ -1,12 +1,23 @@
 from django.shortcuts import render
 from django.shortcuts import render, redirect
-from movie_server.models import Movie
+from movie_server.models import Movie, Person
+from django.views.generic.edit import CreateView, DeleteView, UpdateView, FormView
+from django.views.generic.list import ListView
+
+
 
 
 # Create your views here.
-def movies_list(request):
-    cont={}
-    cont['movies']=Movie.objects.order_by('-year').all()
+class MovieListView(ListView):
+    model=Movie    
+    fields='__all__'
+    #sucess_url=''
+
+class AddMovieView(CreateView):
     
-    print(cont)
-    return render(request, 'list_movies.html', cont)
+    model=Movie
+    fields=('title', 'director', 'screenplay', 'year', 'ranking')
+    #exclude=('starring',)
+    # sucess_url=''
+    
+

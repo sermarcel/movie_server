@@ -57,7 +57,7 @@ ROOT_URLCONF = 'movie.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR +'/movie_server/Templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,7 +130,9 @@ USE_TZ = False
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'public')
 STATICFILES_DIRS = (
-os.path.join(BASE_DIR, "static"),)
+    os.path.join(BASE_DIR, "static"),
+)
+
 
 
 

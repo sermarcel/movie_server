@@ -1,0 +1,37 @@
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Strona z filmami">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+	<title> Lista filmów </title>
+</head>
+
+<body>
+
+<section class="naglowek">
+<div class="ramka">
+	Zbiór filmów Marcelka
+</div>
+
+</section>
+
+
+<section>
+
+      <h3>Add movie</h3>
+      <h5 class="w3-padding-32"> <div>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Save">
+                </form>
+            </div></h5>
+
+</section>    
+
+   
+</body>
+</html>
