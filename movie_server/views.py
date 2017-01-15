@@ -20,4 +20,5 @@ class AddMovieView(CreateView):
     #exclude=('starring',)
     # sucess_url=''
     
-
+class DelMovieView(DeleteView):
+    pass
